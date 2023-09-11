@@ -74,6 +74,7 @@ def train(cfg: _Config, model_name, experiment_name="", log_dir="./logs", debug=
     model = nn.DataParallel(model)
 
     epoch_range = utils.infinite_range(stats.epoch) if cfg.num_epochs is None else range(stats.epoch, cfg.num_epochs)
+    print(epoch_range)
     for epoch in epoch_range:
         print(f"Epoch {epoch+1}")
 

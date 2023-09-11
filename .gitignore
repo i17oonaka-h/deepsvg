@@ -4,3 +4,7 @@ __pycache__/
 logs/
 *.mp4
 gui_data/
+deepsvg/hiragana/svg_simplefied_large/
+deepsvg/hiragana/unprocessed_svgs/
+deepsvg/hiragana/svg_simplefied_large_meta.csv
+.vscode

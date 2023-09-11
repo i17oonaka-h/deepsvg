@@ -44,8 +44,8 @@ class Config(_Config):
         self.loader_num_workers = 4 * num_gpus
 
         # Training
-        self.num_epochs = 50
-        self.val_every = 1000
+        self.num_epochs = 400
+        self.val_every = 500
 
         # Optimization
         self.learning_rate = 1e-3 * num_gpus

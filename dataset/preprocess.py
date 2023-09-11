@@ -6,6 +6,9 @@ from tqdm import tqdm
 import glob
 import pandas as pd
 
+# add deepsvg to path: deepsvg is in the under /home/i17oonaka/deepsvg/
+import sys
+sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 from deepsvg.svglib.svg import SVG
 
 
@@ -13,6 +16,7 @@ def preprocess_svg(svg_file, output_folder, meta_data):
     filename = os.path.splitext(os.path.basename(svg_file))[0]
 
     svg = SVG.load_svg(svg_file)
+    svg.to_path()
     svg.fill_(False)
     svg.normalize()
     svg.zoom(0.9)

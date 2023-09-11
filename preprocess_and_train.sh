@@ -1,0 +1,2 @@
+python dataset/preprocess.py --data_folder deepsvg/hiragana/unprocessed_svgs --output_folder deepsvg/hiragana/svg_simplefied_large --output_meta_file deepsvg/hiragana/svg_simplefied_large_meta.csv --workers 12
+python -m deepsvg.train --config-module configs.deepsvg.hierarchical_ordered

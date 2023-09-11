@@ -10,10 +10,14 @@ class _Config:
 
         self.num_gpus = num_gpus                              #
 
-        self.dataloader_module = "deepsvg.svgtensor_dataset"  #
+        # self.dataloader_module = "deepsvg.svgtensor_dataset"  #
+        self.dataloader_module = "deepsvg.svg_dataset"
         self.collate_fn = None                                #
-        self.data_dir = "./dataset/icons_tensor/"             #
-        self.meta_filepath = "./dataset/icons_meta.csv"       #
+        # Dataset
+        self.data_dir = "/home/i17oonaka/deepsvg/deepsvg/hiragana/svg_simplefied_large/"
+        self.meta_filepath = "/home/i17oonaka/deepsvg/deepsvg/hiragana/svg_simplefied_large_meta.csv"
+        # self.data_dir = "./dataset/icons_tensor/"             #
+        # self.meta_filepath = "./dataset/icons_meta.csv"       #
         self.loader_num_workers = 0                           #
 
         self.pretrained_path = None                           #
@@ -24,7 +28,7 @@ class _Config:
         self.num_steps = None                                 #
         self.learning_rate = 1e-3                             #
         self.batch_size = 100                                 #
-        self.warmup_steps = 500                               #
+        self.warmup_steps = 180000 # 500                               #
 
 
         # Dataset
@@ -43,9 +47,9 @@ class _Config:
 
         self.grad_clip = None                                 #
 
-        self.log_every = 20                                   #
-        self.val_every = 1000                                 #
-        self.ckpt_every = 1000                                #
+        self.log_every = 50                                  #
+        self.val_every = 100                                 #
+        self.ckpt_every = 5000                                #
 
         self.stats_to_print = {
             "train": ["lr", "time"]

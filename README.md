@@ -16,6 +16,16 @@
     
 </p>
 
+## DeepSVG を用いたひらがな生成モデルの学習
+原著からの追加点
+- ひらがなのデータセットの生成コードを追加 ```deepsvg/deepsvg/hiragana```
+    - 詳細は```deepsvg/deepsvg/hiragana/README.md```を参照
+- 全ひらがなの補間を取りGIFアニメーションを生成するサンプルコードを追加　```deepsvg/notebooks/hiragana_interpolation.ipynb```  
+※　学習済みモデルが必要。ひらがな学習済みモデルのダウンロードは[こちら](https://drive.google.com/file/d/1_88RbQgIT5KrXzdCcx_AfhhMgdAF-5Kl/view?usp=sharing)  
+![hiragana_interpolation](docs/imgs/hiragana_interpolate.gif)
+![hiragana_interpolation2](docs/imgs/hiragana_interpolate2.gif)
+
+
 ## Introduction
 This is the official code for the paper "DeepSVG: A Hierarchical Generative Network for Vector Graphics Animation".
 Please refer to section [below](#citation) for Citation details.
@@ -228,6 +238,7 @@ and `notebooks/latent_ops.ipynb` for word2vec-like operations in the SVG latent 
 | SVGLib walk-through                          | [svglib.ipynb](notebooks/svglib.ipynb)               |
 | Differentiable SVGTensor optimization        | [svgtensor.ipynb](notebooks/svgtensor.ipynb)         |
 | DeepSVG interpolation between pairs of icons | [interpolation.ipynb](notebooks/interpolation.ipynb) |
+| DeepSVG hiraganas interpolation              | [hiragana_interpolation.ipynb](notebooks/hiragana_interpolation.ipynb) |
 | DeepSVG latent space operations              | [latent_ops.ipynb](notebooks/latent_ops.ipynb)       |
 | DeepSVG animation between user-drawn images  | [animation.ipynb](notebooks/animation.ipynb)         |
 | DeepSVG generation and interpolation of Fonts| [fonts.ipynb](notebooks/fonts.ipynb)                 |
